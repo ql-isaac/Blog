@@ -105,6 +105,7 @@ deploy:
   type: git
   repo:
     github: git@github.com:ql-isaac/ql-isaac.github.io.git,master
+    gitee: git@gitee.com:ql-isaac/ql-isaac.git,master
 
 # Markdown-it config
 ## Docs: https://github.com/celsomiranda/hexo-renderer-markdown-it/wiki
