@@ -149,7 +149,7 @@ site_state: true
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
   blog: https://blog.imql.life/ || fa-solid fa-blog
-  www: https://imql.life/ || fa-solid fa-house-user
+  www: https://www.imql.life/ || fa-solid fa-house-user
   nav: https://nav.imql.life/ || fa-solid fa-location-arrow
   space: https://space.imql.life/ || fa-solid fa-cube
   Github: https://github.com/ql-isaac || fa-brands fa-github
@@ -369,7 +369,7 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: false
+    enable: true
     # Available values: default | flat | mac
     style:
 
