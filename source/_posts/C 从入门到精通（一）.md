@@ -569,8 +569,7 @@ int main(){
 
 一个表达式是一系列运算符和算子的组合，用来计算出一个值。运算符（operator）是指进行运算的动作，比如加法运算符”+“，减法运算符”-“，算子（operand）是指参与运算的值，这个值可能是常数、变量和方法返回值等。
 
-## 参考视频
+## 参考
 
-[翁凯 C 语言（bilibili）](https://www.bilibili.com/video/BV19W411B7w1)
-
-[【C 语言】《带你学 C 带你飞》（bilibili）](https://www.bilibili.com/video/BV17s411N78s)
+- [翁凯 C 语言（bilibili）](https://www.bilibili.com/video/BV19W411B7w1)
+- [【C 语言】《带你学 C 带你飞》（bilibili）](https://www.bilibili.com/video/BV17s411N78s)
