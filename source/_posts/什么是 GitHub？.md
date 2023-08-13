@@ -1,17 +1,13 @@
 ---
-
 title: 什么是 GitHub？
-
+urlname: ri2cx9
+date: "2021-08-14 16:52:10"
+updated: "2023-08-12 11:15:15"
+author: ql-isaac
 trans: What_is_GitHub
-
-date: 2021-08-14 16:52:10
-
-cover: https://img.imql.life/GitHub.png
-
+cover: "https://img.imql.life/GitHub.png"
 categories:
-
-- Git 和 GitHub 从入门到实践
-
+  - Git 和 GitHub 从入门到实践
 ---
 
 "hub"，乃中心之意，当你看了我的另外一篇[《什么是 Git》](https://www.ql-isaac.cn/2020/01/24/What_is_Git/)，对 Git 已经熟悉一些的时候，就会自然明白"GitHub"的含义。
@@ -131,23 +127,15 @@ git commit -m ":art: style: 格式修改"
 ```
 
 GitHub 上的效果图：
-
-![](https://img.imql.life/illustrations/FtXqxH5Zrw52sjQZYeL4YPoPxSia.png)
+![提交示例](https://img.imql.life/illustrations/2f86183c15ea9fb3551e9ebc8e9898cf.png "提交示例")
 
 ## Fork
 
 GitHub 是一个宝库，每当发现一个有趣的仓库，我们不仅仅会去点一个 Star（收藏）或 Watch（关注），我们还会去 Fork 一下该开源仓库：
-
-![](https://img.imql.life/illustrations/Fr_lzksrxr26IS1bshj5pYFserFE.png)
-
+![Fork](https://img.imql.life/illustrations/520d3e0bd0b460d45064eff773cb72c8.png "Fork")
 这样，该仓库会被克隆一份成为自己的仓库：
-
-![](https://img.imql.life/illustrations/FuJF2bK2lg23BKTpG238UF7vEhmE.png)
-
+![自己的仓库](https://img.imql.life/illustrations/9a1c2edb10035cba981168383170791b.png "自己的仓库")
 之后原仓库是不断有作者在更新，自己的仓库也想获得这些更新怎么办？其实很简单，如下图，这里正是在提示你原仓库的 main 分支已经超前了 13 次提交。
-
-![](https://img.imql.life/illustrations/FhY79nz_49aN-yMhAa0HjiWbs3nY.png)
-
+![upstream](https://img.imql.life/illustrations/8db197fb2c48e4314982940bc343fd17.png "upstream")
 我们只需要点击右侧的 Fetch upstream 从原仓库进行拉取，这样自己这边的仓库也是最新的了：
-
-![](https://img.imql.life/illustrations/FtBUjAI96oyE-IEjJl3ezasTP6Fv.png)
+![fetch](https://img.imql.life/illustrations/4947b1eb819e76189076e269fd844d65.png "fetch")

@@ -148,12 +148,12 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  blog: https://blog.imql.life/ || fa-solid fa-blog
-  www: https://www.imql.life/ || fa-solid fa-house-user
-  nav: https://nav.imql.life/ || fa-solid fa-location-arrow
-  space: https://space.imql.life/ || fa-solid fa-cube
-  Github: https://github.com/ql-isaac || fa-brands fa-github
-  E-Mail: mailto:834471527@qq.com || fa-solid fa-envelope
+  blog: https://blog.imql.life/ || fas fa-blog
+  www: https://www.imql.life/ || fas fa-house-user
+  nav: https://nav.imql.life/ || fas fa-location-arrow
+  space: https://space.imql.life/ || fas fa-cube
+  Github: https://github.com/ql-isaac || fab fa-github
+  E-Mail: mailto:834471527@qq.com || fa fa-envelope
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -739,7 +739,7 @@ algolia_search:
 # Local Search
 # Dependencies: https://github.com/next-theme/hexo-generator-searchdb
 local_search:
-  enable: false
+  enable: true
   # If auto, trigger search by changing input.
   # If manual, trigger search by pressing enter key or search button.
   trigger: auto
