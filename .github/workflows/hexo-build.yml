@@ -1,8 +1,8 @@
 name: hexo-build
 on:
-  push:
-    branches:
-      - main
+  repository_dispatch:
+    types:
+      - publish
 env:
   TZ: Asia/Shanghai
 jobs:
@@ -27,6 +27,18 @@ jobs:
       - name: Install dependencies
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
         run: npm ci
+      - name: Download Posts from the last workflow
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          name: "Posts"
+          path: "source/_posts"
+      - name: Download Cache from the last workflow
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          name: "Cache"
+          path: "cache"
       - name: Pull posts from Yuque
         env:
           YUQUE_TOKEN: ${{ secrets.YUQUE_TOKEN }}
