@@ -2,7 +2,7 @@
 title: 什么是 Git？
 urlname: itfc94
 date: "2020-01-24 22:30:00"
-updated: "2023-08-12 11:15:15"
+updated: "2023-08-27 02:22:51"
 author: ql-isaac
 trans: What_is_Git
 cover: "https://img.imql.life/Git.gif"
@@ -91,11 +91,11 @@ Git 是[林纳斯·托瓦兹](https://www.baidu.com/s?wd=%E6%9E%97%E7%BA%B3%E6%9
 16. 全局用户信息配置。分别输入以下两个命令回车执行，无提示表示命令执行成功，可以用`git config --list`来查看配置好的信息；
 
 ```bash
-git config --global user.name "<自己的Github用户名>"
+git config --global user.name "<自己的GitHub用户名>"
 ```
 
 ```bash
-git config --global user.email "<自己的Github邮箱>"
+git config --global user.email "<自己的GitHub邮箱>"
 ```
 
 17. 生成 SSH 秘钥并复制公钥。输入以下命令回车执行，然后连敲三次回车键，此时打开 .ssh 文件夹，其位于自己的 Windows 用户文件夹下，如下图，用文本编辑器打开 id_rsa.pub，Ctrl+A，复制里面全部的内容；
@@ -138,11 +138,11 @@ git --version
 3. 全局用户信息配置。分别输入以下两个命令回车执行，无提示表示命令执行成功，可以用`git config --list`来查看配置好的信息；
 
 ```bash
-git config --global user.name "<自己的Github用户名>"
+git config --global user.name "<自己的GitHub用户名>"
 ```
 
 ```bash
-git config --global user.email "<自己的Github邮箱>"
+git config --global user.email "<自己的GitHub邮箱>"
 ```
 
 4. 生成 SSH 秘钥。输入以下命令回车执行，然后连敲三次回车键；
