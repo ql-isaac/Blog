@@ -29,12 +29,14 @@ jobs:
         run: npm ci
       - name: Download Posts from the last workflow
         uses: dawidd6/action-download-artifact@v2
+        continue-on-error: true
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           name: "Posts"
           path: "source/_posts"
       - name: Download Cache from the last workflow
         uses: dawidd6/action-download-artifact@v2
+        continue-on-error: true
         with:
           github_token: ${{secrets.GITHUB_TOKEN}}
           name: "Cache"
@@ -50,6 +52,7 @@ jobs:
           COS_REGION: ${{ secrets.COS_REGION }}
           COS_HOST: ${{ secrets.COS_HOST }}
         run: |
+          [ ! -d "cache" ] && mkdir cache
           npm run sync
       - name: Setup private rsa key
         env:
@@ -60,18 +63,36 @@ jobs:
           chmod 600 ~/.ssh/id_rsa
           ssh-keyscan github.com >> ~/.ssh/known_hosts
           ssh-keyscan gitee.com >> ~/.ssh/known_hosts
-      - name: Deploy
+      - name: Download and clone PUBLIC
+        run: |
+          curl -LsO https://github.com/ql-isaac/ql-isaac.github.io/archive/refs/heads/master.zip
+          unzip master.zip -d .
+          mv ql-isaac.github.io-master/ public
+          git clone git@github.com:ql-isaac/ql-isaac.github.io.git .deploy_git
+      - name: Download DB
+        uses: dawidd6/action-download-artifact@v2
+        continue-on-error: true
+        with:
+          github_token: ${{secrets.GITHUB_TOKEN}}
+          name: "DB"
+      - name: Generate and deploy
         run: |
           git config --global user.name "${{secrets.GIT_NAME}}"
           git config --global user.email "${{secrets.GIT_EMAIL}}"
           npm run build && npm run deploy
-      - name: Upload Cache for next workflow to use
+      - name: Upload DB for next workflow to download
+        uses: actions/upload-artifact@v3
+        with:
+          name: "DB"
+          path: db.json
+          retention-days: 90
+      - name: Upload Cache for next workflow to download
         uses: actions/upload-artifact@v3
         with:
           name: "Cache"
           path: cache
           retention-days: 90
-      - name: Upload Posts for next workflow to use
+      - name: Upload Posts for next workflow to download
         uses: actions/upload-artifact@v3
         with:
           name: "Posts"
